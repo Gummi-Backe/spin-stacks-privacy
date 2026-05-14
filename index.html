@@ -6,49 +6,249 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Privacy policy for the Android game SpinStacks">
   <style>
-    :root { color-scheme: light dark; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; margin: 0; }
-    header, main, footer { max-width: 920px; margin: 0 auto; padding: 24px; }
-    header { border-bottom: 1px solid #ddd; }
-    h1 { font-size: 1.8rem; margin: 0 0 8px; }
-    h2 { margin-top: 1.6em; }
-    h3 { margin-top: 1.2em; }
-    .muted { color: #666; font-size: .95rem; }
-    nav a { margin-right: 12px; }
-    ul { margin: .5em 0 .5em 1.25em; }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: rgba(0,0,0,.05); padding: .05em .35em; border-radius: 4px; }
-    footer { border-top: 1px solid #ddd; font-size: .95rem; color: #666; }
-    @media (max-width:600px){ header,main,footer{padding:16px} }
+    :root {
+      color-scheme: dark;
+      --bg: #07142f;
+      --bg2: #0b2250;
+      --card: rgba(13, 35, 82, .72);
+      --card2: rgba(18, 50, 112, .66);
+      --line: rgba(125, 205, 255, .22);
+      --text: #eef7ff;
+      --muted: #a8c3df;
+      --accent: #35d6ff;
+      --accent2: #9f5cff;
+      --good: #89ffb0;
+      --shadow: 0 24px 80px rgba(0, 0, 0, .38);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(71, 225, 255, .28), transparent 32rem),
+        radial-gradient(circle at 86% 10%, rgba(159, 92, 255, .32), transparent 30rem),
+        radial-gradient(circle at 50% 100%, rgba(0, 255, 179, .14), transparent 28rem),
+        linear-gradient(155deg, #050915 0%, var(--bg) 45%, var(--bg2) 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 72%);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    header {
+      padding: 44px 0 28px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 24px;
+      align-items: center;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(14, 42, 100, .82), rgba(8, 18, 45, .72));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .app-icon {
+      width: 104px;
+      height: 104px;
+      border-radius: 24px;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.18), 0 18px 44px rgba(0,0,0,.45);
+    }
+
+    .eyebrow {
+      color: var(--good);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      font-weight: 750;
+      margin: 0 0 6px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 780px;
+      margin: 14px 0 0;
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      color: #dcecff;
+      padding: 7px 12px;
+      font-size: .9rem;
+    }
+
+    nav {
+      margin: 18px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: #d9efff;
+      padding: 8px 11px;
+      border: 1px solid rgba(125, 205, 255, .18);
+      border-radius: 12px;
+      background: rgba(0,0,0,.16);
+      font-size: .92rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 0 0 42px;
+    }
+
+    section {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      box-shadow: 0 16px 48px rgba(0,0,0,.2);
+      padding: 24px;
+      backdrop-filter: blur(12px);
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(53, 214, 255, .16), rgba(159, 92, 255, .13));
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.36rem;
+      letter-spacing: -.02em;
+    }
+
+    h3 {
+      margin: 22px 0 7px;
+      color: #dff5ff;
+      font-size: 1.03rem;
+    }
+
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: .5em 0 0 1.2em; padding: 0; }
+    li { margin: .35em 0; }
+    strong { color: #ffffff; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .mini-card {
+      padding: 18px;
+      border: 1px solid rgba(125, 205, 255, .18);
+      border-radius: 18px;
+      background: var(--card2);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding: 28px 0 38px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding: 22px; }
+      .app-icon { width: 88px; height: 88px; }
+      .two-col { grid-template-columns: 1fr; }
+      section { padding: 20px; }
+    }
   </style>
 </head>
 <body>
-<header>
-  <h1>Privacy Policy – SpinStacks</h1>
-  <p class="muted">Last updated: 14 May 2026</p>
-  <nav class="muted">
-    <a href="#controller">Controller</a>
-    <a href="#scope">Scope</a>
-    <a href="#data">Data processing</a>
-    <a href="#permissions">Permissions</a>
-    <a href="#legal">Legal basis</a>
-    <a href="#retention">Retention</a>
-    <a href="#sharing">Sharing</a>
-    <a href="#rights">Your rights</a>
-    <a href="#children">Children</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header class="shell">
+  <div class="hero">
+    <img class="app-icon" src="app-icon.jpg" alt="SpinStacks app icon">
+    <div>
+      <p class="eyebrow">SpinStacks Android Game</p>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">
+        This page explains how SpinStacks handles local game data, PlayFab online features,
+        Google Play Billing, premium content, leaderboards, multiplayer, support, and account deletion.
+      </p>
+      <div class="meta">
+        <span class="pill">Last updated: 14 May 2026</span>
+        <span class="pill">Package: com.RK.SpinStacks</span>
+        <span class="pill">No personalized advertising</span>
+      </div>
+      <nav aria-label="Privacy policy sections">
+        <a href="#controller">Controller</a>
+        <a href="#data">Data</a>
+        <a href="#billing">Billing</a>
+        <a href="#deletion">Deletion</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#rights">Rights</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
 </header>
 
-<main>
-  <section id="controller">
+<main class="shell">
+  <section id="controller" class="highlight">
     <h2>1. Controller</h2>
     <p>
-      SpinStacks is provided by:<br>
-      <strong>r.kerner</strong><br>
-      Email: <a href="mailto:r.kerner.developer@gmail.com">r.kerner.developer@gmail.com</a><br>
-      App name: <strong>SpinStacks</strong><br>
-      Package name: <strong>com.RK.SpinStacks</strong>
+      SpinStacks is provided by <strong>r.kerner</strong>.
+      For privacy questions, support, or to exercise your rights, contact
+      <a href="mailto:r.kerner.developer@gmail.com">r.kerner.developer@gmail.com</a>.
     </p>
+    <div class="two-col">
+      <div class="mini-card">
+        <strong>App name</strong><br>
+        SpinStacks
+      </div>
+      <div class="mini-card">
+        <strong>Package name</strong><br>
+        com.RK.SpinStacks
+      </div>
+    </div>
   </section>
 
   <section id="scope">
@@ -65,8 +265,8 @@
 
     <h3>3.1 Local game data</h3>
     <p>
-      SpinStacks stores gameplay settings and progress locally on your device. This may include
-      score, level, selected settings, avatar selection, premium state cache, and similar gameplay data.
+      SpinStacks stores gameplay settings and progress locally on your device. This may include score,
+      level, selected settings, avatar selection, premium state cache, and similar gameplay data.
       Local data remains on your device until you reset it, delete the app data, or uninstall the app.
     </p>
 
@@ -80,11 +280,8 @@
     </p>
     <p>
       Passwords are handled by PlayFab for authentication. The developer does not display or store your
-      password in plain text inside the app.
-    </p>
-    <p>
-      Microsoft privacy information:
-      <a href="https://privacy.microsoft.com/privacystatement" rel="nofollow">https://privacy.microsoft.com/privacystatement</a>
+      password in plain text inside the app. Microsoft privacy information:
+      <a href="https://privacy.microsoft.com/privacystatement" rel="nofollow">privacy.microsoft.com</a>.
     </p>
 
     <h3>3.3 High scores and leaderboards</h3>
@@ -100,8 +297,10 @@
       identifiers, player identifiers, connection/session information, and gameplay messages required to
       establish and run the multiplayer session. The app does not provide voice chat or free-text chat.
     </p>
+  </section>
 
-    <h3>3.5 Google Play Billing and premium purchase</h3>
+  <section id="billing" class="highlight">
+    <h2>4. Google Play Billing and premium purchase</h2>
     <p>
       SpinStacks offers a non-consumable one-time premium purchase through Google Play Billing. Google
       processes payment and purchase data as its own service provider. The app receives purchase status
@@ -110,26 +309,31 @@
     </p>
     <p>
       Google privacy information:
-      <a href="https://policies.google.com/privacy" rel="nofollow">https://policies.google.com/privacy</a>
+      <a href="https://policies.google.com/privacy" rel="nofollow">policies.google.com/privacy</a>.
     </p>
+  </section>
 
-    <h3>3.6 Account deletion</h3>
+  <section id="deletion" class="highlight">
+    <h2>5. Account deletion</h2>
     <p>
       You can request account deletion from inside the app. The deletion request is sent to PlayFab and
       processed server-side. This deletes the PlayFab player account and associated PlayFab data such as
       cloud progress, high score/statistics, player data, and service records according to PlayFab's
-      deletion process. Google Play purchases are not deleted by deleting the PlayFab account; premium
-      can be restored later with the same Google Play account if Google Play confirms the purchase.
+      deletion process.
     </p>
+    <p>
+      Google Play purchases are not deleted by deleting the PlayFab account; premium can be restored later
+      with the same Google Play account if Google Play confirms the purchase.
+    </p>
+  </section>
 
-    <h3>3.7 Support requests</h3>
+  <section id="support">
+    <h2>6. Support requests and diagnostics</h2>
     <p>
       If you contact support, the app may help you include technical support information such as app
       version and PlayFab account ID. This information is used only to investigate and respond to your
       request.
     </p>
-
-    <h3>3.8 Diagnostics and crash information</h3>
     <p>
       Google Play and platform services may process diagnostic information such as device type, Android
       version, installation state, crash reports, or ANR reports. These reports are used to improve
@@ -139,7 +343,7 @@
   </section>
 
   <section id="permissions">
-    <h2>4. App permissions</h2>
+    <h2>7. App permissions</h2>
     <p>SpinStacks uses only permissions required for its features:</p>
     <ul>
       <li><strong>Internet</strong> – for PlayFab login, high scores, multiplayer, premium purchase checks, and support-related online functions.</li>
@@ -148,7 +352,7 @@
   </section>
 
   <section id="legal">
-    <h2>5. Legal basis</h2>
+    <h2>8. Legal basis</h2>
     <p>Where GDPR applies, processing may be based on:</p>
     <ul>
       <li><strong>Contract performance</strong> – to provide the game, account, multiplayer, leaderboard, and premium features.</li>
@@ -159,7 +363,7 @@
   </section>
 
   <section id="retention">
-    <h2>6. Retention</h2>
+    <h2>9. Retention</h2>
     <p>
       Local data remains on your device until you delete it, reset it, or uninstall the app. PlayFab data
       is retained for as long as needed to provide the online features or until the account is deleted,
@@ -169,7 +373,7 @@
   </section>
 
   <section id="sharing">
-    <h2>7. Sharing and service providers</h2>
+    <h2>10. Sharing and service providers</h2>
     <p>
       SpinStacks does not sell personal data and does not use personalized advertising. Data may be
       processed by service providers required to run the app:
@@ -182,7 +386,7 @@
   </section>
 
   <section id="rights">
-    <h2>8. Your rights</h2>
+    <h2>11. Your rights</h2>
     <p>
       Depending on your location, you may have rights to access, correct, delete, restrict, export, or
       object to the processing of your personal data. You may also have the right to lodge a complaint
@@ -192,7 +396,7 @@
   </section>
 
   <section id="children">
-    <h2>9. Children</h2>
+    <h2>12. Children</h2>
     <p>
       SpinStacks is not specifically directed at children under 13. The app does not use personalized
       advertising and does not intentionally create advertising profiles for children.
@@ -200,15 +404,15 @@
   </section>
 
   <section id="changes">
-    <h2>10. Changes to this policy</h2>
+    <h2>13. Changes to this policy</h2>
     <p>
       This policy may be updated when features, service providers, legal requirements, or technical
       processing change. The current version is linked in the app and/or on Google Play.
     </p>
   </section>
 
-  <section id="contact">
-    <h2>11. Contact</h2>
+  <section id="contact" class="highlight">
+    <h2>14. Contact</h2>
     <p>
       For privacy questions, support, or to exercise your rights, contact:<br>
       <a href="mailto:r.kerner.developer@gmail.com">r.kerner.developer@gmail.com</a>
@@ -216,7 +420,7 @@
   </section>
 </main>
 
-<footer>
+<footer class="shell">
   <p>© <span id="y"></span> r.kerner – SpinStacks</p>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </footer>
