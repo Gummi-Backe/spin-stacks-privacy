@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Terms of Use - SpinStacks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terms of use for the Android game SpinStacks">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07142f;
+      --bg2: #0b2250;
+      --card: rgba(13, 35, 82, .72);
+      --card2: rgba(18, 50, 112, .66);
+      --line: rgba(125, 205, 255, .22);
+      --text: #eef7ff;
+      --muted: #a8c3df;
+      --accent: #35d6ff;
+      --accent2: #9f5cff;
+      --good: #89ffb0;
+      --shadow: 0 24px 80px rgba(0, 0, 0, .38);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(71, 225, 255, .28), transparent 32rem),
+        radial-gradient(circle at 86% 10%, rgba(159, 92, 255, .32), transparent 30rem),
+        radial-gradient(circle at 50% 100%, rgba(0, 255, 179, .14), transparent 28rem),
+        linear-gradient(155deg, #050915 0%, var(--bg) 45%, var(--bg2) 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 72%);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    header {
+      padding: 44px 0 28px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 24px;
+      align-items: center;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(14, 42, 100, .82), rgba(8, 18, 45, .72));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .app-icon {
+      width: 104px;
+      height: 104px;
+      border-radius: 24px;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.18), 0 18px 44px rgba(0,0,0,.45);
+    }
+
+    .eyebrow {
+      color: var(--good);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      font-weight: 750;
+      margin: 0 0 6px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 780px;
+      margin: 14px 0 0;
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      color: #dcecff;
+      padding: 7px 12px;
+      font-size: .9rem;
+    }
+
+    nav {
+      margin: 18px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: #d9efff;
+      padding: 8px 11px;
+      border: 1px solid rgba(125, 205, 255, .18);
+      border-radius: 12px;
+      background: rgba(0,0,0,.16);
+      font-size: .92rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 0 0 42px;
+    }
+
+    section {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      box-shadow: 0 16px 48px rgba(0,0,0,.2);
+      padding: 24px;
+      backdrop-filter: blur(12px);
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(53, 214, 255, .16), rgba(159, 92, 255, .13));
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.36rem;
+      letter-spacing: -.02em;
+    }
+
+    h3 {
+      margin: 22px 0 7px;
+      color: #dff5ff;
+      font-size: 1.03rem;
+    }
+
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: .5em 0 0 1.2em; padding: 0; }
+    li { margin: .35em 0; }
+    strong { color: #ffffff; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .mini-card {
+      padding: 18px;
+      border: 1px solid rgba(125, 205, 255, .18);
+      border-radius: 18px;
+      background: var(--card2);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding: 28px 0 38px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding: 22px; }
+      .app-icon { width: 88px; height: 88px; }
+      .two-col { grid-template-columns: 1fr; }
+      section { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+<header class="shell">
+  <div class="hero">
+    <img class="app-icon" src="app-icon.jpg" alt="SpinStacks app icon">
+    <div>
+      <p class="eyebrow">SpinStacks Android Game</p>
+      <h1>Terms of Use</h1>
+      <p class="subtitle">
+        These terms explain the rules for using SpinStacks accounts, public aliases,
+        online play, leaderboards, premium features, and other game services.
+      </p>
+      <div class="meta">
+        <span class="pill">Last updated: 17 July 2026</span>
+        <span class="pill">Package: com.RK.SpinStacks</span>
+        <span class="pill">App-generated public aliases</span>
+      </div>
+      <nav aria-label="Terms of use sections">
+        <a href="index.html">Privacy Policy</a>
+        <a href="#accounts">Accounts</a>
+        <a href="#conduct">Acceptable Use</a>
+        <a href="#online">Online Play</a>
+        <a href="#purchases">Purchases</a>
+        <a href="#deletion">Deletion</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+  <section class="highlight">
+    <h2>1. Provider and scope</h2>
+    <p>
+      SpinStacks is provided by <strong>r.kerner</strong>. These Terms of Use apply to the SpinStacks
+      Android game, package <strong>com.RK.SpinStacks</strong>, including its online, leaderboard,
+      multiplayer, and premium features.
+    </p>
+    <p>
+      By installing or using SpinStacks, you agree to these terms. If you are not legally able to agree
+      on your own, a parent or legal guardian must review them with you. Mandatory rights under applicable
+      consumer law remain unaffected.
+    </p>
+  </section>
+
+  <section id="accounts">
+    <h2>2. Accounts and public aliases</h2>
+    <p>
+      Online features use a PlayFab player account. You are responsible for keeping your login credentials
+      secure and for providing accurate account information where requested.
+    </p>
+    <p>
+      SpinStacks automatically creates a public alias such as <strong>Pilot-4A1B2C3D4E5F67</strong> from
+      the PlayFab player ID. Your private username and email address are not used as public player names.
+      The game does not currently offer public free-text profiles, user posts, voice chat, or text chat.
+    </p>
+  </section>
+
+  <section id="conduct">
+    <h2>3. Acceptable use</h2>
+    <p>You must not:</p>
+    <ul>
+      <li>cheat, automate play, manipulate scores, purchases, matchmaking, or game progress;</li>
+      <li>interfere with servers, network traffic, other players, or the normal operation of the game;</li>
+      <li>attempt to access another person's account or bypass security and access controls;</li>
+      <li>use SpinStacks for unlawful, abusive, fraudulent, or harmful activity; or</li>
+      <li>copy, redistribute, or commercially exploit game assets except where applicable law permits it.</li>
+    </ul>
+    <p>
+      Accounts or online access may be limited or disabled when reasonably necessary to protect players,
+      services, or legal rights. This does not affect any mandatory remedies available to you.
+    </p>
+  </section>
+
+  <section id="online">
+    <h2>4. Online and multiplayer services</h2>
+    <p>
+      Leaderboards, cloud progress, matchmaking, private matches, and versus play depend on internet access
+      and third-party services such as Microsoft PlayFab. These services may occasionally be unavailable,
+      changed, or discontinued for maintenance, security, technical, or legal reasons.
+    </p>
+    <p>
+      Multiplayer results can be affected by connection quality, device performance, and service
+      availability. SpinStacks does not guarantee uninterrupted matchmaking or a particular opponent.
+    </p>
+  </section>
+
+  <section id="purchases">
+    <h2>5. Premium purchase</h2>
+    <p>
+      Premium access is offered as a non-consumable in-app purchase through Google Play. Pricing, payment,
+      purchase processing, refunds, and restoration are also subject to Google Play's terms and your
+      applicable statutory rights. SpinStacks receives purchase-status information needed to unlock or
+      restore premium features, but does not receive full payment-card details.
+    </p>
+  </section>
+
+  <section id="license">
+    <h2>6. License and intellectual property</h2>
+    <p>
+      You receive a personal, limited, non-exclusive, non-transferable license to use SpinStacks for its
+      intended purpose on compatible devices. SpinStacks, its code, artwork, audio, names, and other assets
+      remain protected by intellectual-property law and the licenses of their respective owners.
+    </p>
+  </section>
+
+  <section id="updates">
+    <h2>7. Updates and changes</h2>
+    <p>
+      The game and these terms may be updated to improve features, security, compatibility, or legal
+      compliance. Material changes will be reflected by an updated date on this page and, where required,
+      an additional notice. Continued use after a change is subject to applicable law.
+    </p>
+  </section>
+
+  <section id="deletion">
+    <h2>8. Account deletion</h2>
+    <p>
+      You can request PlayFab account deletion from the account area inside SpinStacks. Deleting a PlayFab
+      account removes associated online data according to the deletion process described in the
+      <a href="index.html#deletion">Privacy Policy</a>. Google Play purchase records are managed separately
+      by Google and are not deleted by deleting the PlayFab account.
+    </p>
+  </section>
+
+  <section id="warranty">
+    <h2>9. Availability and responsibility</h2>
+    <p>
+      SpinStacks is provided with the level of care required by applicable law. No provision in these terms
+      excludes or limits liability where doing so would be unlawful, including mandatory consumer rights.
+      To the extent permitted by law, no guarantee is made that every device, network, or online service will
+      operate without interruption or error.
+    </p>
+  </section>
+
+  <section id="privacy">
+    <h2>10. Privacy</h2>
+    <p>
+      Information about local data, PlayFab, Google Play Billing, leaderboards, multiplayer, retention, and
+      account deletion is available in the <a href="index.html">SpinStacks Privacy Policy</a>.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>11. Contact</h2>
+    <p>
+      Questions about SpinStacks or these terms can be sent to
+      <a href="mailto:r.kerner.developer@gmail.com">r.kerner.developer@gmail.com</a>.
+    </p>
+  </section>
+</main>
+
+<footer class="shell">
+  <p>&copy; <span id="year"></span> r.kerner - SpinStacks</p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+</body>
+</html>

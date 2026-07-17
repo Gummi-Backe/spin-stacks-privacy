@@ -1,6 +1,6 @@
 # Privacy Policy – SpinStacks
 
-Last updated: 14 May 2026
+Last updated: 17 July 2026
 
 ## 1. Controller
 
@@ -10,6 +10,7 @@ SpinStacks is provided by:
 - Email: r.kerner.developer@gmail.com
 - App name: SpinStacks
 - Package name: com.RK.SpinStacks
+- Terms of Use: https://gummi-backe.github.io/spin-stacks-privacy/terms.html
 
 ## 2. Scope
 
@@ -23,7 +24,7 @@ SpinStacks stores gameplay settings and progress locally on your device. This ma
 
 ### 3.2 PlayFab account and online services
 
-SpinStacks uses Microsoft PlayFab for player login, cloud progress, high scores, leaderboards, online multiplayer/versus matchmaking, and account deletion. Depending on how you use the app, PlayFab may process a player ID, display name, login credentials or login identifiers, email address if provided, avatar data, high score, level/progress, multiplayer lobby data, technical connection data, and related service events.
+SpinStacks uses Microsoft PlayFab for player login, cloud progress, high scores, leaderboards, online multiplayer/versus matchmaking, and account deletion. Depending on how you use the app, PlayFab may process a player ID, an app-generated public alias, private login credentials or login identifiers, email address if provided, avatar data, high score, level/progress, multiplayer lobby data, technical connection data, and related service events.
 
 Passwords are handled by PlayFab for authentication. The developer does not display or store your password in plain text inside the app.
 
@@ -31,7 +32,7 @@ Microsoft privacy information: https://privacy.microsoft.com/privacystatement
 
 ### 3.3 High scores and leaderboards
 
-If you use online features, your display name and high score may appear in the in-game leaderboard. When your PlayFab account is deleted, related PlayFab statistics and leaderboard entries are removed according to PlayFab's account deletion process.
+If you use online features, SpinStacks shows an automatically generated public alias and your high score in the in-game leaderboard. Your private username and email address are not used as public player names. When your PlayFab account is deleted, related PlayFab statistics and leaderboard entries are removed according to PlayFab's account deletion process.
 
 ### 3.4 Multiplayer and versus mode
 
