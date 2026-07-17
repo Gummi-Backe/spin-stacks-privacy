@@ -11,6 +11,7 @@ SpinStacks is provided by:
 - App name: SpinStacks
 - Package name: com.RK.SpinStacks
 - Terms of Use: https://gummi-backe.github.io/spin-stacks-privacy/terms.html
+- Account deletion: https://gummi-backe.github.io/spin-stacks-privacy/delete-account.html
 
 ## 2. Scope
 
@@ -46,7 +47,9 @@ Google privacy information: https://policies.google.com/privacy
 
 ### 3.6 Account deletion
 
-You can request account deletion from inside the app. The deletion request is sent to PlayFab and processed server-side. This deletes the PlayFab player account and associated PlayFab data such as cloud progress, high score/statistics, player data, and service records according to PlayFab's deletion process. Google Play purchases are not deleted by deleting the PlayFab account; premium can be restored later with the same Google Play account if Google Play confirms the purchase.
+You can request account deletion from inside the app. The deletion request is sent to PlayFab and processed server-side. This deletes the PlayFab player account and associated PlayFab data such as cloud progress, high score/statistics, player data, and service records according to PlayFab's deletion process.
+
+If you cannot access the app, submit a request through the public SpinStacks account deletion page: https://gummi-backe.github.io/spin-stacks-privacy/delete-account.html. Google Play purchases are not deleted by deleting the PlayFab account; premium can be restored later with the same Google Play account if Google Play confirms the purchase.
 
 ### 3.7 Support requests
 
