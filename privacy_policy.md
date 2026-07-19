@@ -1,6 +1,6 @@
 # Privacy Policy – SpinStacks
 
-Last updated: 17 July 2026
+Last updated: 19 July 2026
 
 ## 1. Controller
 
@@ -21,11 +21,11 @@ This privacy policy applies to the Android game SpinStacks, distributed through 
 
 ### 3.1 Local game data
 
-SpinStacks stores gameplay settings and progress locally on your device. This may include score, level, selected settings, avatar selection, premium state cache, and similar gameplay data. Local data remains on your device until you reset it, delete the app data, or uninstall the app.
+SpinStacks stores gameplay settings and progress locally on your device. This may include score, level, selected settings, avatar selection, premium state cache, and similar gameplay data. SpinStacks also creates a random, app-specific installation identifier for automatic PlayFab login. This identifier is not derived from an Android hardware or device identifier. Local data remains on your device until you reset it, delete the app data, or uninstall the app.
 
 ### 3.2 PlayFab account and online services
 
-SpinStacks uses Microsoft PlayFab for player login, cloud progress, high scores, leaderboards, online multiplayer/versus matchmaking, and account deletion. Depending on how you use the app, PlayFab may process a player ID, an app-generated public alias, private login credentials or login identifiers, email address if provided, avatar data, high score, level/progress, multiplayer lobby data, technical connection data, and related service events.
+SpinStacks uses Microsoft PlayFab for player login, cloud progress, high scores, leaderboards, online multiplayer/versus matchmaking, and account deletion. Depending on how you use the app, PlayFab may process a PlayFab player ID, the random app-specific installation login identifier, the public player name you enter, private login credentials, your email address, avatar data, high score, level/progress, multiplayer lobby data, technical connection data, device and platform information required by the service, and related service events.
 
 Passwords are handled by PlayFab for authentication. The developer does not display or store your password in plain text inside the app.
 
@@ -33,11 +33,11 @@ Microsoft privacy information: https://privacy.microsoft.com/privacystatement
 
 ### 3.3 High scores and leaderboards
 
-If you use online features, SpinStacks shows an automatically generated public alias and your high score in the in-game leaderboard. Your private username and email address are not used as public player names. When your PlayFab account is deleted, related PlayFab statistics and leaderboard entries are removed according to PlayFab's account deletion process.
+The player name you enter during registration is public. SpinStacks displays it with your high score in the in-game leaderboard and may show it to your opponent in versus mode. You may enter a nickname or your real name, but you should only enter a name that you want other players to see. Your email address, password, random installation identifier, and PlayFab account ID are not displayed in the public leaderboard. When your PlayFab account is deleted, related PlayFab statistics and leaderboard entries are removed according to PlayFab's account deletion process.
 
 ### 3.4 Multiplayer and versus mode
 
-SpinStacks uses PlayFab services for versus matchmaking and private matches. This can involve lobby identifiers, player identifiers, connection/session information, and gameplay messages required to establish and run the multiplayer session. The app does not provide voice chat or free-text chat.
+SpinStacks uses PlayFab services for versus matchmaking and private matches. This can involve lobby identifiers, player identifiers, connection/session information, and gameplay messages required to establish and run the multiplayer session. The app does not provide voice chat or free-text chat. Your public player name can be shown to the other player in a versus match.
 
 ### 3.5 Google Play Billing and premium purchase
 
@@ -53,11 +53,13 @@ If you cannot access the app, submit a request through the public SpinStacks acc
 
 ### 3.7 Support requests
 
-If you contact support, the app may help you include technical support information such as app version and PlayFab account ID. This information is used only to investigate and respond to your request.
+If you contact support, the app may help you include technical support information such as the app version and a shortened PlayFab account ID. The PlayFab account ID is an account reference, not an Android device identifier. This information is used only to investigate and respond to your request.
 
 ### 3.8 Diagnostics and crash information
 
 Google Play and platform services may process diagnostic information such as device type, Android version, installation state, crash reports, or ANR reports. These reports are used to improve stability and compatibility. If Unity or PlayFab services generate technical logs, they are used for operating and debugging the game services.
+
+Production builds limit routine diagnostic messages. SpinStacks does not intentionally write player names, email addresses, passwords, full account/session identifiers, private match codes, or purchase details to its own production logs. Editor and development builds may contain additional diagnostics.
 
 ## 4. App permissions
 
@@ -77,7 +79,7 @@ Where GDPR applies, processing may be based on:
 
 ## 6. Retention
 
-Local data remains on your device until you delete it, reset it, or uninstall the app. PlayFab data is retained for as long as needed to provide the online features or until the account is deleted, subject to PlayFab's technical deletion process and legal retention requirements. Purchase records are retained by Google according to Google Play's policies and legal requirements.
+Local data, including the random app-specific installation identifier, remains on your device until you delete it, reset it, or uninstall the app. The identifier can remain linked to the PlayFab account while it is needed for automatic login. PlayFab data is retained for as long as needed to provide the online features or until the account is deleted, subject to PlayFab's technical deletion process and legal retention requirements. Purchase records are retained by Google according to Google Play's policies and legal requirements.
 
 ## 7. Sharing and service providers
 
